@@ -27,3 +27,11 @@ for (let temp in mylist) {
 for (let temp of mylist) {
     console.log(temp);
 }
+
+let number: Number = 20;
+console.log(number);
+// number = true;
+
+let NS: number | string = "Karen";
+console.log(typeof NS);
+NS = 25;
