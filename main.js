@@ -86,13 +86,18 @@
 // console.log(keys)
 
 
-const obj = {
-    name: "karen",
-    age: 24,
-    info: function () {
-        console.log(this.name, this.age);
+const getExtensionOFile = (filnName) => {
+    if(typeof filnName !== 'string') {
+        throw new Error('Invalid type of parameter');
     }
+    const spl = filnName.split('.');
+    return spl.length === 1 ? null : spl[spl.length - 1];
 }
 
-obj.info()
-// console.log(obj.info())
+console.log(getExtensionOFile('sdf.qwer.twey.yewy.wy.ey.wey.fsa'));
+
+const promise = new Promise((resolve, reject) => {
+    resolve(1)
+}).then((x) => x + 1)
+.then((x) => x + 1)
+.then((x) => console.log(x))
