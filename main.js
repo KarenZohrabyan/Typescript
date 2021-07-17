@@ -91,13 +91,19 @@ const getExtensionOFile = (filnName) => {
         throw new Error('Invalid type of parameter');
     }
     const spl = filnName.split('.');
+    console.log(spl.length)
     return spl.length === 1 ? null : spl[spl.length - 1];
 }
 
 console.log(getExtensionOFile('sdf.qwer.twey.yewy.wy.ey.wey.fsa'));
 
-const promise = new Promise((resolve, reject) => {
-    resolve(1)
-}).then((x) => x + 1)
-.then((x) => x + 1)
-.then((x) => console.log(x))
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(2);
+    }, 1000)
+})
+
+myPromise.then((res) => res * 2).then((res) => res * 2).then((res) => console.log(res * 2))
+
+
+// Try - catch works synchronously
