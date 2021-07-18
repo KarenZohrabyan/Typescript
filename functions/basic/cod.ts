@@ -17,7 +17,6 @@ let dask = {
 
 console.log(dask.info())  
 
-
 const mylist = [1, "string", false];
 
 for (let temp in mylist) {
@@ -28,10 +27,15 @@ for (let temp of mylist) {
     console.log(temp);
 }
 
-let number: Number = 20;
-console.log(number);
-// number = true;
 
-let NS: number | string = "Karen";
-console.log(typeof NS);
-NS = 25;
+const personn: {
+    name: string,
+    age: number,
+    hobbies: string[],
+    role: [number, string]
+} = {
+    name: "Karen",
+    age: 25,
+    hobbies: ["Sports", "Cooking"],
+    role: [2, 'musician']
+}

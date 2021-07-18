@@ -97,13 +97,34 @@ const getExtensionOFile = (filnName) => {
 
 console.log(getExtensionOFile('sdf.qwer.twey.yewy.wy.ey.wey.fsa'));
 
-const myPromise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve(2);
-    }, 1000)
-})
+// const myPromise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve(2);
+//     }, 1000)
+// })
 
-myPromise.then((res) => res * 2).then((res) => res * 2).then((res) => console.log(res * 2))
+// myPromise.then((res) => res * 2).then((res) => res * 2).then((res) => console.log(res * 2))
 
 
-// Try - catch works synchronously
+// Try - catch works synchronously 
+
+const obj = {
+    name: "karen",
+    age: 25
+}
+
+const ob = {
+    heigth: 185
+}
+
+const blo = {
+    asd: 'asd'
+}
+
+ob.__proto__ = obj;
+obj.name = "qweqweqwe"
+console.log(ob.name)
+
+blo.__proto__ = ob;
+console.log(blo.name)
+console.log(blo.age)
