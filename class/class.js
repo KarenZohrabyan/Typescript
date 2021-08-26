@@ -71,3 +71,4 @@ var IT = new Department("Karen", 25);
 IT.describe();
 var obj = { name: 'asd', describe: IT.describe };
 obj.describe();
+console.log(typeof MyAccount);

@@ -58,3 +58,4 @@ IT.describe();
 
 const obj = {name: 'asd', describe: IT.describe}
 obj.describe()
+console.log(typeof MyAccount);

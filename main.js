@@ -86,45 +86,46 @@
 // console.log(keys)
 
 
-const getExtensionOFile = (filnName) => {
-    if(typeof filnName !== 'string') {
-        throw new Error('Invalid type of parameter');
-    }
-    const spl = filnName.split('.');
-    console.log(spl.length)
-    return spl.length === 1 ? null : spl[spl.length - 1];
-}
-
-console.log(getExtensionOFile('sdf.qwer.twey.yewy.wy.ey.wey.fsa'));
-
-// const myPromise = new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//         resolve(2);
-//     }, 1000)
-// })
-
-// myPromise.then((res) => res * 2).then((res) => res * 2).then((res) => console.log(res * 2))
-
-
 // Try - catch works synchronously 
 
-const obj = {
-    name: "karen",
-    age: 25
-}
+// const obj = {
+//     name: "karen",
+//     age: 25
+// }
 
-const ob = {
-    heigth: 185
-}
+// const ob = {
+//     heigth: 185
+// }
 
-const blo = {
-    asd: 'asd'
-}
+// const blo = {
+//     asd: 'asd'
+// }
 
-ob.__proto__ = obj;
-obj.name = "qweqweqwe"
-console.log(ob.name)
+// ob.__proto__ = obj;
+// obj.name = "qweqweqwe"
+// console.log(ob.name)
 
-blo.__proto__ = ob;
-console.log(blo.name)
-console.log(blo.age)
+// blo.__proto__ = ob;
+// console.log(blo.name)
+// console.log(blo.age)
+
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(2);
+    }, 300)
+})
+
+myPromise.then((res) => res * 2).then((res) => res * 2).then((res) => console.log(res * 2))
+
+
+let promise = Promise.all([
+    new Promise(reject => setTimeout(() => reject(new Error("ASDASD")), 300)),
+    new Promise(resolve => setTimeout(() => resolve(1), 600)),
+    new Promise(resolve => setTimeout(() => resolve(555), 2000)),
+])
+.then(res => console.log(res))
+// .catch((err) => console.log(err))
+
+// const temp = 'asdasd ads asd asd'
+// console.log(temp.split(' ').join(''))
+// console.log(temp.trim(' '))
