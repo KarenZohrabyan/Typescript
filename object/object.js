@@ -12,4 +12,9 @@ var me = {
 me['describe'] = 'ASDSAD';
 // me.about = 255;
 console.log(me["name"]);
-console.log(me.describe);
+var obj = {
+    name: "karen",
+    age: 25
+};
+obj.asd = "asdasd";
+console.log(obj);

@@ -38,3 +38,18 @@ const me : User = {
 me['describe'] = 'ASDSAD';
 // me.about = 255;
 console.log(me["name"]);
+
+
+
+
+const obj : {
+    [key: string]: any,
+    name: string,
+    age: number
+} = {
+    name: "karen",
+    age: 25
+}
+
+obj.asd = "asdasd";
+console.log(obj)
