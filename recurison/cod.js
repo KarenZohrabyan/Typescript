@@ -27,6 +27,8 @@ const checkObj = (obj) => {
     for(let temp in obj) {
         if(Array.isArray(obj[temp])) {
             count += sumOfArrayRecObj(obj[temp]);
+        } else if (typeof obj[temp] == "object" && obj[temp] != null) {
+            count += checkObj(obj[temp]);
         } else if (typeof obj[temp] == "number") {
             count += obj[temp];
         }
@@ -42,8 +44,7 @@ const sumOfArrayRecObj = (arr) => {
                 count += sumOfArrayRecObj(temp);
             } else if(typeof temp === "object" && temp != null) {
                 count += checkObj(temp)
-            }
-            else {
+            } else {
                 count += temp;
             }
         }
@@ -52,4 +53,4 @@ const sumOfArrayRecObj = (arr) => {
 }
 
 
-console.log(sumOfArrayRecObj(arr3));
+console.log(sumOfArrayRecObj(arr));
